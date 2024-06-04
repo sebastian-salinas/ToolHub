@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #090c31;
+  display: grid;
+  place-items: center;
+}
+
+.calculadora {
+  background-color: #15173c;
+  color: white;
+  width: 350px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.btn {
+  background-color: #15173c;
+  color: white;
+  border: 0;
+  padding: 1.5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #090c31;
+  cursor: pointer;
+}
+
+.display {
+  background-color: #090c31;
+  grid-column: 1 / -1;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+#igual {
+  grid-column: -3/-1;
+  background-color: rgb(204, 91, 91);
+}
+
+#igual:hover {
+  background-color: rgb(221, 49, 49);
+  transition: 0.5ms;
+}
+
+/* calculadora cientifica*/
+
+.calc_cient {
+  background-color: #15173c;
+  color: white;
+  width: 450px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+#igual_cient {
+  grid-column: -3/-1;
+  background-color: rgb(204, 91, 91);
+}
+
+#igual_cient:hover {
+  background-color: rgb(221, 49, 49);
+  transition: 0.5ms;
+}
