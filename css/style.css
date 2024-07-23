@@ -6,19 +6,111 @@
 }
 
 body {
-  min-height: 100vh;
   background-color: #111a22;
+}
+
+/* Layout*/
+.layout {
+  padding-top: 1.25rem;
+  padding-left: 6.875rem;
+  padding-right: 6.875rem;
+  width: 100%;
   display: grid;
-  place-items: center;
+  grid:
+    "aside nav nav" 4rem
+    "aside main main" 1fr
+    "aside main main" 1fr
+    /25% 37.5% 37.5%;
+}
+
+.aside {
+  grid-area: aside;
+}
+.nav {
+  grid-area: nav;
+}
+.main {
+  grid-area: main;
+}
+
+/*Nav*/
+
+.nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #243647;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #243647;
+  columns: #fff;
+  margin-right: 2.5rem;
+}
+
+/*Aside*/
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-aside {
+  text-align: left;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+}
+
+.item-list-btn {
+  margin-top: 0.5rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+
+.item-list .item-list-btn:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.item-list-btn:hover {
+  background-color: #243647;
+  cursor: pointer;
+}
+
+/*Main*/
+
+.main {
+  margin-top: 1rem;
+}
+
+.title-main {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .calculadora {
   background-color: #111a22;
   color: white;
-  width: 350px;
+  width: 26.25rem;
   max-width: 100%;
   padding: 1.5rem;
-  border-radius: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
@@ -52,6 +144,7 @@ body {
   border-radius: 0.5rem;
   display: flex;
   justify-content: end;
+  height: 3.5rem;
 }
 
 #igual {
