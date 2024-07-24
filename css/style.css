@@ -10,27 +10,54 @@ body {
 }
 
 /* Layout*/
-.layout {
-  padding-top: 1.25rem;
-  padding-left: 6.875rem;
-  padding-right: 6.875rem;
-  width: 100%;
-  display: grid;
-  grid:
-    "aside nav nav" 4rem
-    "aside main main" 1fr
-    "aside main main" 1fr
-    /25% 37.5% 37.5%;
+
+@media (max-width: 792px) {
+  .layout {
+    padding-top: 1.25rem;
+    padding-left: 7rem;
+    width: 100%;
+    display: grid;
+    grid:
+      "aside nav nav" 4rem
+      "aside main main" 1fr
+      "aside main main" 1fr
+      /25% 37.5% 37.5%;
+  }
+
+  .aside {
+    grid-area: aside;
+  }
+  .nav {
+    grid-area: nav;
+  }
+  .main {
+    grid-area: main;
+  }
 }
 
-.aside {
-  grid-area: aside;
-}
-.nav {
-  grid-area: nav;
-}
-.main {
-  grid-area: main;
+@media (min-width: 793px) {
+  .layout {
+    padding-top: 1.25rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    width: 100%;
+    display: grid;
+    grid:
+      "aside nav nav" 4rem
+      "aside main main" 1fr
+      "aside main main" 1fr
+      /25% 37.5% 37.5%;
+  }
+
+  .aside {
+    grid-area: aside;
+  }
+  .nav {
+    grid-area: nav;
+  }
+  .main {
+    grid-area: main;
+  }
 }
 
 /*Nav*/
@@ -51,6 +78,9 @@ body {
   background-color: #243647;
   columns: #fff;
   margin-right: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Aside*/
@@ -66,6 +96,7 @@ body {
   font-size: 30px;
   color: #fff;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .item-list {
@@ -75,13 +106,18 @@ body {
 }
 
 .item-list-btn {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   height: 3rem;
   border-radius: 0.75rem;
   justify-content: start;
   align-items: center;
   display: flex;
   color: #fff;
+}
+
+.item-list-btn p {
+  font-size: 15px;
+  margin-left: 1rem;
 }
 
 .item-list .item-list-btn:nth-child(2) {
@@ -91,6 +127,20 @@ body {
 .item-list-btn:hover {
   background-color: #243647;
   cursor: pointer;
+}
+
+.icon {
+  width: 30px; /* Tamaño del icono */
+  height: 30px; /* Tamaño del icono */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.nav-btn-icon {
+  width: 18px; /* Tamaño del icono */
+  height: 18px; /* Tamaño del icono */
 }
 
 /*Main*/
