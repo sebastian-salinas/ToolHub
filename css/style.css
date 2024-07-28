@@ -7,6 +7,7 @@
 
 body {
   background-color: #111a22;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 /* Layout*/
@@ -76,11 +77,17 @@ body {
   height: 40px;
   border-radius: 12px;
   background-color: #243647;
-  columns: #fff;
+  border: none;
   margin-right: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.nav-btn:hover {
+  background-color: #243647a8;
+  cursor: pointer;
 }
 
 /*Aside*/
@@ -94,7 +101,7 @@ body {
 .title-aside {
   text-align: left;
   font-size: 30px;
-  color: #fff;
+  color: #ececec;
   font-weight: 700;
   cursor: pointer;
 }
@@ -112,7 +119,15 @@ body {
   justify-content: start;
   align-items: center;
   display: flex;
-  color: #fff;
+  color: #ececec;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.item-list-btn a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* Mantener el color del texto */
 }
 
 .item-list-btn p {
@@ -151,13 +166,13 @@ body {
 
 .title-main {
   font-size: 24px;
-  color: #fff;
+  color: #ececec;
   font-weight: 700;
 }
 
 .calculadora {
   background-color: #111a22;
-  color: white;
+  color: #ececec;
   width: 26.25rem;
   max-width: 100%;
   padding: 1.5rem;
@@ -168,7 +183,7 @@ body {
 
 .btn {
   background-color: #1a2632;
-  color: white;
+  color: #ececec;
   border: 0;
   padding: 1.5rem 0.5rem;
   border-radius: 0.5rem;
@@ -211,7 +226,7 @@ body {
 
 .calc_cient {
   background-color: #15173c;
-  color: white;
+  color: #ececec;
   width: 450px;
   max-width: 100%;
   padding: 1.5rem;
@@ -232,7 +247,7 @@ body {
 }
 
 .container {
-  background: white;
+  color: #ececec;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -253,27 +268,68 @@ h1 {
   flex-direction: column;
 }
 
-label {
-  font-weight: bold;
+.listado-de-tareas {
+  background-color: #111a22;
+  color: #ececec;
+  padding: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-input,
-select {
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.btn-tareas {
+  border-radius: 12px;
+  width: 10rem;
 }
 
-button {
-  padding: 10px;
-  background: #007bff;
-  color: white;
+.btn-tareas {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 12px;
+  background-color: #243647;
   border: none;
-  border-radius: 4px;
+  margin-right: 2.5rem;
+  color: #ececec;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-tareas:hover {
+  background-color: #243647a8;
   cursor: pointer;
 }
 
-button:hover {
-  background: #0056b3;
+.display-tareas {
+  background-color: #1a2632;
+  border-color: #344d65;
+  color: #ececec;
+  border-radius: 12px 0 0 12px;
+  border-style: solid;
+  border-width: 0.8px;
+  border-radius: 0.5rem;
+  width: 25rem;
+  height: 3rem;
+}
+
+#listaTareas {
+  list-style: none;
+  color: #ececec;
+  margin-left: 1.5rem;
+  font-size: 18px;
+}
+
+#listTareas li {
+  border: none;
+}
+
+.boton-eliminar {
+  width: 1.75rem;
+  height: 1.25rem;
+  border-radius: 6px;
+  background-color: #243647;
+  border: none;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.boton-eliminar:hover {
+  background-color: #243647a8;
+  cursor: pointer;
 }

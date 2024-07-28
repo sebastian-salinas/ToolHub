@@ -52,17 +52,13 @@
             <p>Conversor de monedas</p>
           </div>
           <div class="item-list-btn">
-            <a
-              href="/html/index-to-do-list.html"
-              style="display: flex; align-items: center; text-decoration: none">
-              <div class="icon-container">
-                <img
-                  src="/assets/to-do-list-icon.svg"
-                  alt="To do list icon"
-                  class="icon" />
-              </div>
-              <p>Lista de tareas</p>
-            </a>
+            <div class="icon-container">
+              <img
+                src="/assets/to-do-list-icon.svg"
+                alt="To do list icon"
+                class="icon" />
+            </div>
+            <p>Lista de tareas</p>
           </div>
         </section>
       </aside>
@@ -77,29 +73,13 @@
         </div>
       </nav>
       <main class="main">
-        <h2 class="title-main">Calculadora</h2>
-        <div class="calculadora">
-          <div class="display">0</div>
-          <button id="c" class="btn">C</button>
-          <button id="borrar" class="btn">←</button>
-          <button class="btn">%</button>
-          <button class="btn">/</button>
-          <button class="btn">7</button>
-          <button class="btn">8</button>
-          <button class="btn">9</button>
-          <button class="btn">*</button>
-          <button class="btn">4</button>
-          <button class="btn">5</button>
-          <button class="btn">6</button>
-          <button class="btn">-</button>
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">+</button>
-          <button id="cero" class="btn">0</button>
-          <button class="btn">.</button>
-          <button id="igual" class="btn">=</button>
+        <h2 class="title-main">To do list</h2>
+        <div class="listado-de-tareas">
+          <input class="display-tareas" type="text" placeholder="Intrese una nueva tarea"></input>
+          <button class="btn-tareas" onclick="agregarTarea()">Agregar tarea</button>
+          
         </div>
+        <ul id="listaTareas"></ul>
       </main>
     </section>
 
