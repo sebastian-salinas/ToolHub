@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script-to-do-list.js"></script>
+    <script src="/js/script.js"></script>
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
@@ -30,9 +30,8 @@
               <p>Calculadora</p>
             </a>
           </div>
-          <a href="/html/index-unidades.html"></a>
           <div class="item-list-btn">
-            
+            <a href="/html/index-unidades.html">
               <div class="icon-container">
                 <img
                   src="/assets/converter-icon.svg"
@@ -42,6 +41,7 @@
               <p>Conversor de unidades</p>
             </a>
           </div>
+
           <div class="item-list-btn">
             <a href="/html/index-monedas.html">
               <div class="icon-container">
@@ -88,13 +88,10 @@
         </div>
       </nav>
       <main class="main">
-        <h2 class="title-main">To do list</h2>
-        <div class="listado-de-tareas">
-          <input class="display-tareas" type="text" placeholder=" Intrese una nueva tarea"></input>
-          <button class="btn-tareas" onclick="agregarTarea()">Agregar tarea</button>
-          
+        <h2 class="title-main">Conversor de monedas</h2>
+        <div class="calculadora">
+          <div class="display">0</div>
         </div>
-        <ul id="listaTareas"></ul>
       </main>
     </section>
 
