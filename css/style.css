@@ -321,15 +321,42 @@ h1 {
 }
 
 .boton-eliminar {
-  width: 1.75rem;
-  height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 1.5rem;
   border-radius: 6px;
   background-color: #243647;
   border: none;
   transition: background-color 0.5s, color 0.5s;
+  margin-left: 0.5rem; /* Margen para separar del texto */
 }
 
 .boton-eliminar:hover {
   background-color: #243647a8;
   cursor: pointer;
+}
+
+.icono-eliminar {
+  width: 20px; /* Ajusta el tamaño según sea necesario */
+  height: 20px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilo de los elementos de la lista */
+#listaTareas li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 1px solid #344d65;
+  background-color: #1a2632;
+  border-radius: 12px;
+  margin-top: 1rem;
+  text-overflow: inherit;
+  max-width: 100vw;
+}
+
+#listaTareas li span {
+  flex: 1; /* Hace que el texto ocupe el espacio disponible */
 }
