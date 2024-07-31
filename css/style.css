@@ -360,3 +360,57 @@ h1 {
 #listaTareas li span {
   flex: 1; /* Hace que el texto ocupe el espacio disponible */
 }
+
+.converter {
+  background-color: #1a2632;
+  border: 1px solid #344d65;
+  padding: 2rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.input-group input,
+select {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #243647;
+  border: 1px solid #344d65;
+  color: #ececec;
+}
+
+button {
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  background-color: #243647;
+  color: #ececec;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.5s, color 0.5s;
+  border: 1px solid #344d65;
+}
+
+button:hover {
+  background-color: #243647a8;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ececec;
+}

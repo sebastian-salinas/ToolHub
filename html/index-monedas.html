@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js"></script>
+    <script src="/js/script-monedas.js"></script>
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
@@ -89,8 +89,14 @@
       </nav>
       <main class="main">
         <h2 class="title-main">Conversor de monedas</h2>
-        <div class="calculadora">
-          <div class="display">0</div>
+        <div class="converter">
+          <div class="input-group">
+            <input type="number" id="amount" placeholder="Cantidad" />
+            <select id="fromCurrency"></select>
+            <select id="toCurrency"></select>
+          </div>
+          <button id="convert">Convertir</button>
+          <div class="result" id="result"></div>
         </div>
       </main>
     </section>
