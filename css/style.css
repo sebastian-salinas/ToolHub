@@ -257,12 +257,6 @@ h1 {
   text-align: center;
 }
 
-.converter {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -362,6 +356,9 @@ h1 {
 }
 
 .converter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color: #1a2632;
   border: 1px solid #344d65;
   padding: 2rem;
@@ -413,4 +410,18 @@ button:hover {
   font-size: 1.25rem;
   font-weight: bold;
   color: #ececec;
+}
+
+.converter-units {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1a2632;
+  border: 1px solid #344d65;
+  padding: 2rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.5s, color 0.5s;
 }

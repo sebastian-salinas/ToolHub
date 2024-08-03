@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js"></script>
+    <script src="/js/script-unidades.js"></script>
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
@@ -18,7 +18,7 @@
     <section class="layout">
       <aside class="aside">
         <section class="item-list">
-          <div class="title-aside">Herramientas</div>
+          <div class="title-aside">ToolHub</div>
           <div class="item-list-btn">
             <a href="/html/index.html">
               <div class="icon-container">
@@ -92,10 +92,43 @@
         <div class="calculadora">
           <div class="display">0</div>
         </div>
+        <!--<div class="converter">
+          <div class="input-group">
+            <input type="number" id="amount" placeholder="Valor" />
+            <select id="fromCurrency"></select>
+            <select id="toCurrency"></select>
+          </div>
+          <button id="convert">Convertir</button>
+          <div class="reslt" id="reult"></div>
+        </div>
+-->
+
+        <div class="converter-units">
+          <div class="input-group">
+            <select id="category" onchange="populateUnits()">
+              <option value="caudal">Caudal</option>
+              <option value="densidad">Densidad</option>
+              <option value="volumen">Volumen</option>
+              <option value="masa">Masa</option>
+              <option value="presion">Presión</option>
+              <option value="velocidad">Velocidad</option>
+              <option value="potencia">Potencia</option>
+              <option value="par">Par</option>
+              <option value="fuerza">Fuerza</option>
+              <option value="area">Área</option>
+            </select>
+            <input
+              type="number"
+              id="inputValue"
+              placeholder="Valor a convertir" />
+            <select id="fromUnit"></select>
+            <select id="toUnit"></select>
+          </div>
+          <button id="convert" onclick="convert()">Convertir</button>
+          <div class="result" id="result"></div>
+        </div>
       </main>
     </section>
-
-    <br />
 
     <!-- 
     <div class="calc_cient">
