@@ -1,146 +1,198 @@
-// converter.js
-
 const conversionFactors = {
   caudal: {
     "m³/s": 1,
-    "ft³/s": 0.0283168,
-    "l/s": 0.001,
-    "gal/min": 0.0000630902,
-    "m³/min": 0.0166667,
-    "ft³/min": 0.000471947,
-    "l/min": 0.0000166667,
-    "gal/h": 0.0000010515,
-    "m³/h": 0.000277778,
-    "ft³/h": 0.00000786579,
+    "cm³/s": 1000000,
+    "ft³/h": 127132.811835,
+    "ft³/min": 2118.88,
+    "ft³/s": 35.3147,
+    "gal/h (US)": 953020,
+    "gal/min (US)": 15850.3,
+    "in³/min": 3661420,
+    "in³/s": 61023.7,
+    "L/h": 3600000,
+    "L/min": 60000,
+    "L/s": 1000,
+    "m³/h": 3600,
+    "m³/min": 60,
+    "yd³/h": 4708.60780593,
+    "yd³/in": 78.4769753655,
+    "yd³/s": 1.30795954836,
   },
   densidad: {
     "kg/m³": 1,
-    "g/cm³": 1000,
-    "lb/ft³": 16.0185,
-    "lb/gal": 119.826,
-    "kg/l": 1000,
-    "g/l": 1,
-    "lb/in³": 27679.9,
-    "oz/in³": 1729.99,
-    "oz/gal": 7.48915,
-    "g/ml": 1000,
+    "g/cm³": 0.001,
+    "g/L": 1,
+    "g/m³": 1000,
+    "g/ml³": 0.001,
+    "g/mm³": 0.000001,
+    "kg/cm³": 0.000001,
+    "kg/L": 0.001,
+    "lb/ft³": 0.06242796,
+    "lb/in³": 3.61273e-5,
+    "lb/gal (UK)": 0.0100224,
+    "lb/gal (US)": 0.0083454,
+    "mg/cm³": 1000,
+    "mg/l": 1000,
+    "mg/m³": 1000000,
+    "oz/gal (UK)": 0.160358,
+    "oz/gal (US)": 0.133526,
+    "t/m³": 0.001,
   },
   volumen: {
     "m³": 1,
-    "cm³": 1e-6,
-    litro: 0.001,
-    mililitro: 1e-6,
-    "ft³": 0.0283168,
-    "in³": 1.63871e-5,
-    galón: 0.00378541,
-    cuarto: 0.000946353,
-    "onza líquida": 2.9574e-5,
-    taza: 0.000236588,
+    cl: 100000,
+    "cm³": 1000000,
+    dl: 10000,
+    "dm³": 1000,
+    "ft³": 35.3147,
+    "gal (UK)": 220,
+    "gal (US)": 264.172,
+    "in³": 61023.7,
+    L: 1000,
+    mL: 1000000,
+    "yd³": 1.308,
+  },
+  energia: {
+    J: 1,
+    Btu: 9.478e-4,
+    erg: 10000000,
+    cal: 0.2388,
+    "ft lbf": 0.73746312684,
+    "in lbf": 8.850745791,
+    kgfm: 0.10197,
+    kcal: 0.0002388,
+    kJ: 0.001,
+    "kW/h": 2.77778e-7,
+    th: 2.38845896e-7,
+    tec: 3.41143e-11,
+    tep: 2.388e-11,
+    toe: 2.388e-11,
+    "W/h": 0.00027777,
+    "W/s": 1,
+  },
+  longitud: {
+    m: 1,
+    cm: 100,
+    ft: 3.28083,
+    in: 39.37007,
+    km: 0.001,
+    mi: 0.000621371192,
+    nmi: 0.000539957,
+    mm: 1000,
+    yd: 1,
   },
   masa: {
     kg: 1,
-    g: 0.001,
-    mg: 1e-6,
-    tonelada: 1000,
-    lb: 0.453592,
-    oz: 0.0283495,
-    stone: 6.35029,
-    "ton corta": 907.185,
-    "ton larga": 1016.05,
-    carat: 0.0002,
+    g: 1000,
+    mg: 1000000,
+    lb: 2.20462,
+    oz: 35.274,
+    "ton (metric)": 0.001,
+    "ton (US)": 0.00110231,
+    st: 0.157473,
+    ct: 5000,
+    gr: 15432.4,
   },
   presion: {
     Pa: 1,
-    kPa: 1000,
-    MPa: 1e6,
-    bar: 1e5,
-    atm: 101325,
-    psi: 6894.76,
-    Torr: 133.322,
-    mmHg: 133.322,
-    inHg: 3386.39,
-    cmH2O: 98.0665,
-    mmH2O: 9.80665,
+    at: 4.4,
+    atm: 9.86923e-6,
+    bar: 1e-5,
+    inH2O: 0.00401463,
+    inHg: 0.0002953,
+    kPa: 0.001,
+    "lbf/ft²": 0.0208855472,
+    "lbf/in²": 0.0208855472,
+    mbar: 0.01,
+    mca: 0.0001020408,
+    cmca: 0.01020408,
+    mmca: 0.1020408,
+    mmHg: 0.00750062,
+    MPa: 1e-6,
+    "N/mm²": 1e-6,
+    psi: 0.000145038,
+    torr: 0.00750062,
   },
   velocidad: {
     "m/s": 1,
-    "km/h": 0.277778,
-    "mi/h": 0.44704,
-    "ft/s": 0.3048,
-    kn: 0.514444,
-    mach: 343,
-    c: 299792458,
-    "cm/s": 0.01,
-    "in/s": 0.0254,
-    "mm/s": 0.001,
+    "km/h": 3.6,
+    "mi/h": 2.23694,
+    "ft/s": 3.28084,
+    "in/s": 39.3701,
+    knot: 1.94384,
+    mph: 2.23694,
+    "ft/min": 196.85,
+    "cm/s": 100,
+    "mm/s": 1000,
   },
   potencia: {
     W: 1,
-    kW: 1000,
-    HP: 745.7,
-    CV: 735.5,
-    "cal/s": 4.184,
-    "BTU/h": 0.293071,
-    "ft-lb/s": 1.35582,
-    "erg/s": 1e-7,
+    kW: 0.001,
+    MW: 1e-6,
+    "hp (metric)": 0.00135962,
+    "hp (US)": 0.00134102,
+    "BTU/h": 3.41214,
+    "cal/s": 0.238846,
+    "kcal/h": 0.859845,
+    "ft-lb/s": 0.737562,
     "J/s": 1,
-    PS: 735.5,
   },
   par: {
-    "N·m": 1,
-    "kg·m": 9.80665,
-    "lb·ft": 1.35582,
-    "lb·in": 0.113,
-    "oz·in": 0.00706,
-    "dyn·cm": 1e-7,
-    "gf·cm": 0.0000980665,
-    "kgf·m": 9.80665,
-    "gf·m": 0.00980665,
-    "N·cm": 0.01,
+    Nm: 1,
+    kgm: 0.101972,
+    "lb-ft": 0.737562,
+    "lb-in": 8.85075,
+    "dyn-m": 100000,
+    "gf-m": 10197.2,
+    "kgf-cm": 1019.72,
+    "N-cm": 100,
+    "mN-m": 1000,
+    cP: 1e-7,
   },
   fuerza: {
     N: 1,
-    kN: 1000,
-    lbf: 4.44822,
-    dyne: 1e-5,
-    kgf: 9.80665,
-    gf: 0.00980665,
-    kip: 4448.22,
-    ozf: 0.2780139,
-    poundal: 0.138255,
-    sthene: 1000,
+    kN: 0.001,
+    MN: 1e-6,
+    kgf: 0.101972,
+    lbf: 0.224809,
+    dyn: 100000,
+    gf: 101.972,
+    ozf: 3.59694,
+    kip: 0.000224809,
+    tonf: 0.000112404,
   },
   area: {
     "m²": 1,
-    "cm²": 0.0001,
-    "mm²": 1e-6,
-    "km²": 1e6,
-    "ft²": 0.092903,
-    "in²": 0.00064516,
-    acre: 4046.86,
-    hectárea: 10000,
-    "yd²": 0.836127,
-    "mi²": 2.58999e6,
+    "cm²": 10000,
+    "mm²": 1e6,
+    "km²": 1e-6,
+    ha: 0.0001,
+    acre: 0.000247105,
+    "ft²": 10.7639,
+    "in²": 1550,
+    "yd²": 1.19599,
+    "mi²": 3.861e-7,
   },
 };
 
 function populateUnits() {
   const category = document.getElementById("category").value;
-  const fromUnit = document.getElementById("fromUnit");
-  const toUnit = document.getElementById("toUnit");
+  const fromUnitSelect = document.getElementById("fromUnit");
+  const toUnitSelect = document.getElementById("toUnit");
 
-  fromUnit.innerHTML = "";
-  toUnit.innerHTML = "";
+  fromUnitSelect.innerHTML = "";
+  toUnitSelect.innerHTML = "";
 
   for (let unit in conversionFactors[category]) {
-    const optionFrom = document.createElement("option");
-    const optionTo = document.createElement("option");
-    optionFrom.value = unit;
-    optionFrom.textContent = unit;
-    optionTo.value = unit;
-    optionTo.textContent = unit;
-    fromUnit.appendChild(optionFrom);
-    toUnit.appendChild(optionTo);
+    let option1 = document.createElement("option");
+    option1.value = unit;
+    option1.textContent = unit;
+    fromUnitSelect.appendChild(option1);
+
+    let option2 = document.createElement("option");
+    option2.value = unit;
+    option2.textContent = unit;
+    toUnitSelect.appendChild(option2);
   }
 }
 
@@ -159,12 +211,22 @@ function convert() {
   const factorFrom = conversionFactors[category][fromUnit];
   const factorTo = conversionFactors[category][toUnit];
 
-  const convertedValue = (inputValue * factorFrom) / factorTo;
-  result.textContent = `${inputValue} ${fromUnit} = ${convertedValue.toFixed(
-    4
+  const convertedValue = (inputValue / factorFrom) * factorTo;
+
+  result.textContent = `${inputValue} ${fromUnit} = ${formatNumber(
+    convertedValue
   )} ${toUnit}`;
+}
+
+function formatNumber(value) {
+  if (value < 1) {
+    return value.toPrecision(4); // Para valores menores que 1, mostrar hasta 4 dígitos significativos
+  } else {
+    return value.toLocaleString(undefined, { maximumFractionDigits: 6 }); // Para valores mayores que 1, mostrar hasta 6 decimales
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   populateUnits();
+  document.getElementById("convertButton").addEventListener("click", convert);
 });
