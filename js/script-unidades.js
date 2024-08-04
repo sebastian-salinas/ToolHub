@@ -125,6 +125,12 @@ const conversionFactors = {
     "cm/s": 100,
     "mm/s": 1000,
   },
+  temperatura: {
+    ºC: 1,
+    ºF: 33.8,
+    K: 274.15,
+    ºR: 493.47,
+  },
   potencia: {
     W: 1,
     kW: 0.001,
@@ -172,6 +178,35 @@ const conversionFactors = {
     "in²": 1550,
     "yd²": 1.19599,
     "mi²": 3.861e-7,
+  },
+  tiempo: {
+    s: 1,
+    mes: 1,
+    año: 1,
+    semana: 1.65344e-6,
+    día: 1.15741e-5,
+    h: 0.000277778,
+    min: 0.166667,
+    ds: 10,
+    cs: 100,
+    ms: 1000,
+
+    bimestre: 0.5,
+    trimestre: 0.333,
+    cuatrimestre: 0.25,
+    semestre: 0.166667,
+    año: 0.08333,
+
+    bienio: 0.5,
+    trienio: 0.333,
+    cuatrienio: 0.25,
+    lustro: 0.2,
+    sexenio: 0.166667,
+    septenio: 0.14285,
+    década: 0.1,
+    decalustro: 0.02,
+    siglo: 0.01,
+    milenio: 0.001,
   },
 };
 
