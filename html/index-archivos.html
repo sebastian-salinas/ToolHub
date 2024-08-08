@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js"></script>
+    <script src="/js/script-archivos.js"></script>
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
@@ -89,8 +89,15 @@
       </nav>
       <main class="main">
         <h2 class="title-main">Conversor de archivos</h2>
-        <div class="calculadora">
-          <div class="display">0</div>
+        <div class="converter">
+          <h2>Convertir Documento</h2>
+          <input type="file" id="fileInput" />
+          <select id="outputFormat">
+            <option value="pdf">Convertir a PDF</option>
+            <!-- Agrega más opciones si es necesario -->
+          </select>
+          <button onclick="convertFile()">Convertir</button>
+          <p id="status"></p>
         </div>
       </main>
     </section>
