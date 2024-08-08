@@ -113,8 +113,7 @@ body {
     background-color: #1a2632;
     border: 1px solid #344d65;
     padding: 2rem;
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0.5rem 0 0.5rem;
     border-radius: 12px;
     text-align: center;
     transition: background-color 0.5s, color 0.5s;
@@ -139,7 +138,6 @@ body {
   }
 
   button {
-    margin: 0 0.5rem 0 0.5rem;
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     background-color: #243647;
@@ -169,11 +167,103 @@ body {
     background-color: #1a2632;
     border: 1px solid #344d65;
     padding: 2rem;
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0.5rem 0 0.5rem;
     border-radius: 12px;
     text-align: center;
     transition: background-color 0.5s, color 0.5s;
+  }
+
+  .listado-de-tareas {
+    background-color: #111a22;
+    color: #ececec;
+    margin: 1.5rem 0.5rem 0 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .btn-tareas {
+    border-radius: 12px;
+    width: 10rem;
+  }
+
+  .btn-tareas {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 12px;
+    background-color: #243647;
+    border: none;
+
+    color: #ececec;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .btn-tareas:hover {
+    background-color: #243647a8;
+    cursor: pointer;
+  }
+
+  .display-tareas {
+    background-color: #1a2632;
+    border-color: #344d65;
+    color: #ececec;
+    border-radius: 12px 0 0 12px;
+    border-style: solid;
+    border-width: 0.8px;
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 3rem;
+  }
+
+  #listaTareas {
+    list-style: none;
+    color: #ececec;
+    font-size: 18px;
+    margin-right: 0.5rem;
+  }
+
+  #listTareas li {
+    border: none;
+  }
+
+  .boton-eliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    background-color: #243647;
+    border: none;
+    transition: background-color 0.5s, color 0.5s;
+    margin-left: 0.5rem; /* Margen para separar del texto */
+  }
+
+  .boton-eliminar:hover {
+    background-color: #243647a8;
+    cursor: pointer;
+  }
+
+  .icono-eliminar {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: 20px; /* Ajusta el tamaño según sea necesario */
+  }
+
+  /* Estilo de los elementos de la lista */
+  #listaTareas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #344d65;
+    background-color: #1a2632;
+    border-radius: 12px;
+    margin-top: 1rem;
+    text-overflow: inherit;
+    max-width: 100vw;
+  }
+
+  #listaTareas li span {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
   }
 }
 
@@ -303,7 +393,6 @@ body {
   }
 
   button {
-    margin: 0 0.5rem 0 0.5rem;
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     background-color: #243647;
@@ -338,6 +427,99 @@ body {
     border-radius: 12px;
     text-align: center;
     transition: background-color 0.5s, color 0.5s;
+  }
+
+  .listado-de-tareas {
+    background-color: #111a22;
+    color: #ececec;
+    padding: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .btn-tareas {
+    border-radius: 12px;
+    width: 10rem;
+  }
+
+  .btn-tareas {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 12px;
+    background-color: #243647;
+    border: none;
+    margin-right: 2.5rem;
+    color: #ececec;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .btn-tareas:hover {
+    background-color: #243647a8;
+    cursor: pointer;
+  }
+
+  .display-tareas {
+    background-color: #1a2632;
+    border-color: #344d65;
+    color: #ececec;
+    border-radius: 12px 0 0 12px;
+    border-style: solid;
+    border-width: 0.8px;
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 3rem;
+  }
+
+  #listaTareas {
+    list-style: none;
+    color: #ececec;
+    margin-left: 1.5rem;
+    font-size: 18px;
+  }
+
+  #listTareas li {
+    border: none;
+  }
+
+  .boton-eliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    background-color: #243647;
+    border: none;
+    transition: background-color 0.5s, color 0.5s;
+    margin-left: 0.5rem; /* Margen para separar del texto */
+  }
+
+  .boton-eliminar:hover {
+    background-color: #243647a8;
+    cursor: pointer;
+  }
+
+  .icono-eliminar {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: 20px; /* Ajusta el tamaño según sea necesario */
+  }
+
+  /* Estilo de los elementos de la lista */
+  #listaTareas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #344d65;
+    background-color: #1a2632;
+    border-radius: 12px;
+    margin-top: 1rem;
+    text-overflow: inherit;
+    max-width: 100vw;
+  }
+
+  #listaTareas li span {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
   }
 }
 
@@ -471,97 +653,4 @@ h1 {
 .form-group {
   display: flex;
   flex-direction: column;
-}
-
-.listado-de-tareas {
-  background-color: #111a22;
-  color: #ececec;
-  padding: 1.5rem;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.btn-tareas {
-  border-radius: 12px;
-  width: 10rem;
-}
-
-.btn-tareas {
-  width: 10rem;
-  height: 3rem;
-  border-radius: 12px;
-  background-color: #243647;
-  border: none;
-  margin-right: 2.5rem;
-  color: #ececec;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.btn-tareas:hover {
-  background-color: #243647a8;
-  cursor: pointer;
-}
-
-.display-tareas {
-  background-color: #1a2632;
-  border-color: #344d65;
-  color: #ececec;
-  border-radius: 12px 0 0 12px;
-  border-style: solid;
-  border-width: 0.8px;
-  border-radius: 0.5rem;
-  width: 25rem;
-  height: 3rem;
-}
-
-#listaTareas {
-  list-style: none;
-  color: #ececec;
-  margin-left: 1.5rem;
-  font-size: 18px;
-}
-
-#listTareas li {
-  border: none;
-}
-
-.boton-eliminar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 1.5rem;
-  border-radius: 6px;
-  background-color: #243647;
-  border: none;
-  transition: background-color 0.5s, color 0.5s;
-  margin-left: 0.5rem; /* Margen para separar del texto */
-}
-
-.boton-eliminar:hover {
-  background-color: #243647a8;
-  cursor: pointer;
-}
-
-.icono-eliminar {
-  width: 20px; /* Ajusta el tamaño según sea necesario */
-  height: 20px; /* Ajusta el tamaño según sea necesario */
-}
-
-/* Estilo de los elementos de la lista */
-#listaTareas li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  border: 1px solid #344d65;
-  background-color: #1a2632;
-  border-radius: 12px;
-  margin-top: 1rem;
-  text-overflow: inherit;
-  max-width: 100vw;
-}
-
-#listaTareas li span {
-  flex: 1; /* Hace que el texto ocupe el espacio disponible */
 }
