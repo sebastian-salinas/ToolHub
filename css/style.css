@@ -76,7 +76,7 @@ body {
   .title-aside {
     text-align: left;
     font-size: 30px;
-    color: #ececec;
+    color: var(--text-white-color);
     font-weight: 700;
     cursor: pointer;
   }
@@ -134,14 +134,14 @@ body {
     border-radius: 8px;
     background-color: #243647;
     border: 1px solid #344d65;
-    color: #ececec;
+    color: var(--text-white-color);
   }
 
   button {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     background-color: #243647;
-    color: #ececec;
+    color: var(--text-white-color);
     border: none;
     border-radius: 12px;
     transition: background-color 0.5s, color 0.5s;
@@ -157,7 +157,7 @@ body {
     margin-top: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
-    color: #ececec;
+    color: var(--text-white-color);
   }
 
   .converter-units {
@@ -175,7 +175,7 @@ body {
 
   .listado-de-tareas {
     background-color: #111a22;
-    color: #ececec;
+    color: var(--text-white-color);
     margin: 1.5rem 0.5rem 0 0;
     display: flex;
     gap: 0.5rem;
@@ -193,7 +193,7 @@ body {
     background-color: #243647;
     border: none;
 
-    color: #ececec;
+    color: var(--text-white-color);
     transition: background-color 0.5s, color 0.5s;
   }
 
@@ -205,7 +205,7 @@ body {
   .display-tareas {
     background-color: #1a2632;
     border-color: #344d65;
-    color: #ececec;
+    color: var(--text-white-color);
     border-radius: 12px 0 0 12px;
     border-style: solid;
     border-width: 0.8px;
@@ -216,7 +216,7 @@ body {
 
   #listaTareas {
     list-style: none;
-    color: #ececec;
+    color: var(--text-white-color);
     font-size: 18px;
     margin-right: 0.5rem;
   }
@@ -230,8 +230,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 2rem;
-    height: 1.5rem;
-    border-radius: 6px;
+    height: 2rem;
+    border-radius: 0.5rem;
     background-color: #243647;
     border: none;
     transition: background-color 0.5s, color 0.5s;
@@ -329,7 +329,7 @@ body {
   .title-aside {
     text-align: left;
     font-size: 30px;
-    color: #ececec;
+    color: var(--text-white-color);
     font-weight: 700;
     cursor: pointer;
   }
@@ -387,14 +387,14 @@ body {
     border-radius: 8px;
     background-color: #243647;
     border: 1px solid #344d65;
-    color: #ececec;
+    color: var(--text-white-color);
   }
 
   button {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     background-color: #243647;
-    color: #ececec;
+    color: var(--text-white-color);
     border: none;
     border-radius: 12px;
     transition: background-color 0.5s, color 0.5s;
@@ -410,7 +410,7 @@ body {
     margin-top: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
-    color: #ececec;
+    color: var(--text-white-color);
   }
 
   .converter-units {
@@ -429,7 +429,7 @@ body {
 
   .listado-de-tareas {
     background-color: #111a22;
-    color: #ececec;
+    color: var(--text-white-color);
     padding: 1.5rem;
     display: flex;
     gap: 0.5rem;
@@ -447,7 +447,7 @@ body {
     background-color: #243647;
     border: none;
     margin-right: 2.5rem;
-    color: #ececec;
+    color: var(--text-white-color);
     transition: background-color 0.5s, color 0.5s;
   }
 
@@ -459,7 +459,7 @@ body {
   .display-tareas {
     background-color: #1a2632;
     border-color: #344d65;
-    color: #ececec;
+    color: var(--text-white-color);
     border-radius: 12px 0 0 12px;
     border-style: solid;
     border-width: 0.8px;
@@ -470,7 +470,7 @@ body {
 
   #listaTareas {
     list-style: none;
-    color: #ececec;
+    color: var(--text-white-color);
     margin-left: 1.5rem;
     font-size: 18px;
   }
@@ -484,8 +484,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 2rem;
-    height: 1.5rem;
-    border-radius: 6px;
+    height: 2rem;
+    border-radius: 0.5rem;
     background-color: #243647;
     border: none;
     transition: background-color 0.5s, color 0.5s;
@@ -558,12 +558,12 @@ body {
 
 .title-main {
   font-size: 24px;
-  color: #ececec;
+  color: var(--text-white-color);
   font-weight: 700;
 }
 
 .calculadora {
-  color: #ececec;
+  color: var(--text-white-color);
   width: 26.25rem;
   max-width: 100%;
   padding: 1.5rem;
@@ -574,7 +574,7 @@ body {
 
 .btn {
   background-color: #1a2632;
-  color: #ececec;
+  color: var(--text-white-color);
   border: 0;
   padding: 1.5rem 0.5rem;
   border-radius: 0.5rem;
@@ -617,7 +617,7 @@ body {
 
 .calc_cient {
   background-color: #15173c;
-  color: #ececec;
+  color: var(--text-white-color);
   width: 450px;
   max-width: 100%;
   padding: 1.5rem;
@@ -638,7 +638,7 @@ body {
 }
 
 .container {
-  color: #ececec;
+  color: var(--text-white-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -651,4 +651,67 @@ h1 {
 .form-group {
   display: flex;
   flex-direction: column;
+}
+
+/*Canvas*/
+
+.result {
+  margin-top: 20px;
+}
+
+.result p {
+  font-size: 18px;
+}
+
+#totalIncome,
+#totalExpenses,
+#balance {
+  font-weight: bold;
+}
+
+.history {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group-2 {
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group-2 input,
+select {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #243647;
+  border: 1px solid #344d65;
+  color: var(--text-white-color);
+}
+
+.input-group-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

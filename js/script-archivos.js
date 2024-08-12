@@ -1,68 +1,145 @@
-async function convertFile() {
-  const fileInput = document.getElementById("fileInput");
-  const outputFormat = document.getElementById("outputFormat").value;
-  const status = document.getElementById("status");
+// Variables globales
+let totalIncome = 0;
+let totalExpenses = 0;
 
-  if (!fileInput.files.length) {
-    status.textContent = "Por favor, selecciona un archivo.";
+// Cargar datos del localStorage al iniciar
+document.addEventListener("DOMContentLoaded", loadSavedData);
+
+function addItem() {
+  const itemName = document.getElementById("itemName").value;
+  const itemCategory = document.getElementById("itemCategory").value;
+  const itemAmount = parseFloat(document.getElementById("itemAmount").value);
+
+  if (!itemName || isNaN(itemAmount) || itemAmount <= 0) {
+    alert("Por favor, ingrese valores válidos.");
     return;
   }
 
-  const file = fileInput.files[0];
+  // Agregar el nuevo item al historial
+  const item = {
+    name: itemName,
+    category: itemCategory,
+    amount: itemAmount,
+  };
 
-  const apiKey = ""; // Reemplaza con tu API Key de CloudConvert
-  const uploadUrl = "https://api.cloudconvert.com/v2/import/upload";
-  const convertUrl = "https://api.cloudconvert.com/v2/convert";
+  // Actualizar el historial en el localStorage
+  updateLocalStorage(item);
+  addToHistory(item);
 
-  try {
-    // Subir el archivo
-    status.textContent = "Subiendo archivo...";
+  // Actualizar resultados
+  updateResults();
 
-    const uploadResponse = await fetch(uploadUrl, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        filename: file.name,
-      }),
-    });
+  // Limpiar el formulario
+  document.getElementById("budgetForm").reset();
+}
 
-    const uploadData = await uploadResponse.json();
-    const uploadLink = uploadData.data.result.form.url;
+function updateResults() {
+  const balance = totalIncome - totalExpenses;
 
-    const formData = new FormData();
-    formData.append("file", file);
+  document.getElementById("totalIncome").textContent = `$${totalIncome.toFixed(
+    2
+  )}`;
+  document.getElementById(
+    "totalExpenses"
+  ).textContent = `$${totalExpenses.toFixed(2)}`;
+  document.getElementById("balance").textContent = `$${balance.toFixed(2)}`;
 
-    await fetch(uploadLink, {
-      method: "POST",
-      body: formData,
-    });
+  // Log para verificar los totales
+  console.log("Total Ingresos:", totalIncome);
+  console.log("Total Gastos:", totalExpenses);
+  console.log("Balance:", balance);
+}
 
-    // Convertir el archivo
-    status.textContent = "Convirtiendo archivo...";
+function addToHistory(item) {
+  const historyList = document.getElementById("historyList");
 
-    const convertResponse = await fetch(convertUrl, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        input_format: file.name.split(".").pop(),
-        output_format: outputFormat,
-        input: "upload",
-        file: uploadData.data.result.files[0].url,
-      }),
-    });
+  // Crear un nuevo elemento de lista
+  const listItem = document.createElement("li");
+  listItem.textContent = `${item.name} - ${
+    item.category
+  } - $${item.amount.toFixed(2)}`;
 
-    const convertData = await convertResponse.json();
-    const fileUrl = convertData.data.result.files[0].url;
+  // Crear botón de eliminar
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("boton-eliminar");
 
-    status.innerHTML = `<a href="${fileUrl}" download>Descargar archivo convertido</a>`;
-  } catch (error) {
-    console.error("Error:", error);
-    status.textContent = "Hubo un error al convertir el archivo.";
+  const imgEliminar = document.createElement("img");
+  imgEliminar.src = "/assets/delete-icon.svg";
+  imgEliminar.alt = "Eliminar tarea";
+  imgEliminar.classList.add("icono-eliminar");
+
+  deleteButton.appendChild(imgEliminar);
+  deleteButton.onclick = () => {
+    removeItem(item, listItem);
+  };
+
+  listItem.appendChild(deleteButton);
+  historyList.appendChild(listItem);
+}
+
+function updateLocalStorage(item) {
+  // Cargar el historial existente
+  let history = JSON.parse(localStorage.getItem("budgetHistory")) || [];
+
+  // Agregar nuevo item
+  history.push(item);
+  localStorage.setItem("budgetHistory", JSON.stringify(history));
+
+  // Actualizar totales
+  if (item.category === "Ingreso") {
+    totalIncome += item.amount;
+  } else if (item.category === "Gasto") {
+    totalExpenses += item.amount;
   }
+
+  // Guardar los totales
+  localStorage.setItem("totalIncome", totalIncome);
+  localStorage.setItem("totalExpenses", totalExpenses);
+}
+
+function loadSavedData() {
+  // Verificación y carga de datos del localStorage
+  totalIncome = parseFloat(localStorage.getItem("totalIncome")) || 0;
+  totalExpenses = parseFloat(localStorage.getItem("totalExpenses")) || 0;
+
+  console.log("Cargando datos...");
+  console.log("Total Ingresos Inicial:", totalIncome);
+  console.log("Total Gastos Inicial:", totalExpenses);
+
+  const history = JSON.parse(localStorage.getItem("budgetHistory")) || [];
+
+  history.forEach((item) => addToHistory(item));
+  updateResults();
+}
+
+function removeItem(itemToRemove, listItem) {
+  // Cargar historial del localStorage
+  let history = JSON.parse(localStorage.getItem("budgetHistory")) || [];
+
+  // Filtrar el item a eliminar
+  history = history.filter(
+    (item) =>
+      item.name !== itemToRemove.name ||
+      item.category !== itemToRemove.category ||
+      item.amount !== itemToRemove.amount
+  );
+
+  // Actualizar localStorage
+  localStorage.setItem("budgetHistory", JSON.stringify(history));
+
+  // Actualizar los totales
+  if (itemToRemove.category === "Ingreso") {
+    totalIncome -= itemToRemove.amount;
+  } else if (itemToRemove.category === "Gasto") {
+    totalExpenses -= itemToRemove.amount;
+  }
+
+  localStorage.setItem("totalIncome", totalIncome);
+  localStorage.setItem("totalExpenses", totalExpenses);
+
+  // Eliminar el elemento visualmente
+  listItem.remove();
+
+  // Actualizar los resultados visuales
+  updateResults();
 }
