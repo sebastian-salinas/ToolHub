@@ -26,7 +26,7 @@ body {
     width: 100%;
     display: grid;
     grid:
-      "aside nav nav" 4rem
+      "nav nav nav" 4rem
       "aside main main" 1fr
       "aside main main" 1fr
       /25% 37.5% 37.5%;
@@ -74,10 +74,6 @@ body {
   }
 
   .title-aside {
-    text-align: left;
-    font-size: 30px;
-    color: var(--text-white-color);
-    font-weight: 700;
     cursor: pointer;
   }
 
@@ -90,10 +86,6 @@ body {
   .item-list-btn p {
     font-size: 15px;
     margin-top: 0.5rem;
-  }
-
-  .item-list .item-list-btn:nth-child(2) {
-    margin-top: 2rem;
   }
 
   .item-list-btn:hover {
@@ -158,6 +150,7 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--text-white-color);
+    margin-top: 12px;
   }
 
   .converter-units {
@@ -274,6 +267,7 @@ body {
 
   .result p {
     font-size: 18px;
+    margin-top: 12px;
   }
 
   #totalIncome,
@@ -307,9 +301,6 @@ body {
     align-items: center;
   }
 
-  .input-group-2 {
-  }
-
   .input-group-2 input,
   select {
     padding: 0.5rem;
@@ -331,7 +322,7 @@ body {
 
   .nav {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
@@ -366,6 +357,7 @@ body {
     font-size: 24px;
     color: var(--text-white-color);
     font-weight: 700;
+    margin-left: 0.5rem;
   }
 
   .calculadora {
@@ -425,6 +417,30 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  .nav-btn-icon-git {
+    width: 30px; /* Tamaño del icono */
+    height: 30px; /* Tamaño del icono */
+    margin-right: 0.5rem;
+    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
+  }
+
+  .nav-btn-icon-git:hover {
+    cursor: pointer;
+    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
+  .title-img {
+    width: 60px;
+    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
+  }
+
+  .title-img:hover {
+    cursor: pointer;
+    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
 }
 
 @media (min-width: 1001px) {
@@ -435,7 +451,7 @@ body {
     width: 100%;
     display: grid;
     grid:
-      "aside nav nav" 4rem
+      "nav nav nav" 4rem
       "aside main main" 1fr
       "aside main main" 1fr
       /20% 40% 40%;
@@ -487,10 +503,6 @@ body {
   }
 
   .title-aside {
-    text-align: left;
-    font-size: 30px;
-    color: var(--text-white-color);
-    font-weight: 700;
     cursor: pointer;
   }
 
@@ -503,10 +515,6 @@ body {
   .item-list-btn p {
     font-size: 15px;
     margin-left: 1rem;
-  }
-
-  .item-list .item-list-btn:nth-child(2) {
-    margin-top: 2rem;
   }
 
   .item-list-btn:hover {
@@ -683,11 +691,11 @@ body {
   /*Ingresos - gastos*/
 
   .result {
-    margin-top: 20px;
   }
 
   .result p {
     font-size: 18px;
+    margin-top: 12px;
   }
 
   #totalIncome,
@@ -697,7 +705,6 @@ body {
   }
 
   .history {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -748,7 +755,7 @@ body {
 
   .nav {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
@@ -841,5 +848,29 @@ body {
   .form-group {
     display: flex;
     flex-direction: column;
+  }
+
+  .nav-btn-icon-git {
+    width: 30px; /* Tamaño del icono */
+    height: 30px; /* Tamaño del icono */
+    margin-right: 0.5rem;
+    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
+  }
+
+  .nav-btn-icon-git:hover {
+    cursor: pointer;
+    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
+  .title-img {
+    width: 60px;
+    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
+  }
+
+  .title-img:hover {
+    cursor: pointer;
+    transform: scale(1.5) rotate(360deg); /* Combina la escala y la rotación */
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
   }
 }
