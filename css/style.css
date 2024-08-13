@@ -265,6 +265,166 @@ body {
   #listaTareas li span {
     flex: 1; /* Hace que el texto ocupe el espacio disponible */
   }
+
+  /*Ingresos-gastos*/
+
+  .result {
+    margin-top: 20px;
+  }
+
+  .result p {
+    font-size: 18px;
+  }
+
+  #totalIncome,
+  #totalExpenses,
+  #balance {
+    font-weight: bold;
+  }
+
+  .history {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .history ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .history li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-group-2 {
+  }
+
+  .input-group-2 input,
+  select {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #243647;
+    border: 1px solid #344d65;
+    color: var(--text-white-color);
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .input-group-2 button {
+    margin-top: 0.5rem;
+  }
+
+  /*Nav*/
+
+  .nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #243647;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #243647;
+    border: none;
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .nav-btn:hover {
+    background-color: #243647a8;
+    cursor: pointer;
+  }
+
+  /*Main*/
+
+  .main {
+    margin-top: 1rem;
+  }
+
+  .title-main {
+    font-size: 24px;
+    color: var(--text-white-color);
+    font-weight: 700;
+  }
+
+  .calculadora {
+    color: var(--text-white-color);
+    width: 26.25rem;
+    max-width: 100%;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .btn {
+    background-color: #1a2632;
+    color: var(--text-white-color);
+    border: 0;
+    padding: 1.5rem 0.5rem;
+    border-radius: 0.5rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .btn:hover {
+    background-color: #111a22;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .display {
+    background-color: #1a2632;
+    border-color: #344d65;
+    border-radius: 12px 0 0 12px;
+    border-style: solid;
+    border-width: 0.8px;
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: end;
+    height: 3.5rem;
+  }
+
+  #igual {
+    grid-column: -3/-1;
+    background-color: #1466b8;
+  }
+
+  #igual:hover {
+    background-color: #1466b877;
+    transition: 0.5ms;
+  }
+
+  /* calculadora cientifica*/
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1001px) {
@@ -519,199 +679,167 @@ body {
   #listaTareas li span {
     flex: 1; /* Hace que el texto ocupe el espacio disponible */
   }
-}
 
-/*Nav*/
+  /*Ingresos - gastos*/
 
-.nav {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #243647;
-}
+  .result {
+    margin-top: 20px;
+  }
 
-.nav-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background-color: #243647;
-  border: none;
-  margin-right: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.5s, color 0.5s;
-}
+  .result p {
+    font-size: 18px;
+  }
 
-.nav-btn:hover {
-  background-color: #243647a8;
-  cursor: pointer;
-}
+  #totalIncome,
+  #totalExpenses,
+  #balance {
+    font-weight: bold;
+  }
 
-/*Main*/
+  .history {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.main {
-  margin-top: 1rem;
-}
+  .history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 
-.title-main {
-  font-size: 24px;
-  color: var(--text-white-color);
-  font-weight: 700;
-}
+  .history ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-.calculadora {
-  color: var(--text-white-color);
-  width: 26.25rem;
-  max-width: 100%;
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
+  .history li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.btn {
-  background-color: #1a2632;
-  color: var(--text-white-color);
-  border: 0;
-  padding: 1.5rem 0.5rem;
-  border-radius: 0.5rem;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
+  .input-group-2 {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
 
-.btn:hover {
-  background-color: #111a22;
-  cursor: pointer;
-  transition: background-color 0.5s, color 0.5s;
-}
+  .input-group-2 input,
+  select {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #243647;
+    border: 1px solid #344d65;
+    color: var(--text-white-color);
+  }
 
-.display {
-  background-color: #1a2632;
-  border-color: #344d65;
-  border-radius: 12px 0 0 12px;
-  border-style: solid;
-  border-width: 0.8px;
-  grid-column: 1 / -1;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  display: flex;
-  justify-content: end;
-  height: 3.5rem;
-}
+  .input-group-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-#igual {
-  grid-column: -3/-1;
-  background-color: #1466b8;
-}
+  /*Nav*/
 
-#igual:hover {
-  background-color: #1466b877;
-  transition: 0.5ms;
-}
+  .nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #243647;
+  }
 
-/* calculadora cientifica*/
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #243647;
+    border: none;
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+  }
 
-.calc_cient {
-  background-color: #15173c;
-  color: var(--text-white-color);
-  width: 450px;
-  max-width: 100%;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.5rem;
-}
+  .nav-btn:hover {
+    background-color: #243647a8;
+    cursor: pointer;
+  }
 
-#igual_cient {
-  grid-column: -3/-1;
-  background-color: rgb(204, 91, 91);
-}
+  /*Main*/
 
-#igual_cient:hover {
-  background-color: rgb(221, 49, 49);
-  transition: 0.5ms;
-}
+  .main {
+    margin-top: 1rem;
+  }
 
-.container {
-  color: var(--text-white-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  .title-main {
+    font-size: 24px;
+    color: var(--text-white-color);
+    font-weight: 700;
+  }
 
-h1 {
-  text-align: center;
-}
+  .calculadora {
+    color: var(--text-white-color);
+    width: 26.25rem;
+    max-width: 100%;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
+  .btn {
+    background-color: #1a2632;
+    color: var(--text-white-color);
+    border: 0;
+    padding: 1.5rem 0.5rem;
+    border-radius: 0.5rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
 
-/*Canvas*/
+  .btn:hover {
+    background-color: #111a22;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+  }
 
-.result {
-  margin-top: 20px;
-}
+  .display {
+    background-color: #1a2632;
+    border-color: #344d65;
+    border-radius: 12px 0 0 12px;
+    border-style: solid;
+    border-width: 0.8px;
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: end;
+    height: 3.5rem;
+  }
 
-.result p {
-  font-size: 18px;
-}
+  #igual {
+    grid-column: -3/-1;
+    background-color: #1466b8;
+  }
 
-#totalIncome,
-#totalExpenses,
-#balance {
-  font-weight: bold;
-}
+  #igual:hover {
+    background-color: #1466b877;
+    transition: 0.5ms;
+  }
 
-.history {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  /* calculadora cientifica*/
 
-.history h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.history ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.history li {
-  padding: 5px 0;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.input-group-2 {
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.input-group-2 input,
-select {
-  padding: 0.5rem;
-  font-size: 0.85rem;
-  width: 100%;
-  border-radius: 8px;
-  background-color: #243647;
-  border: 1px solid #344d65;
-  color: var(--text-white-color);
-}
-
-.input-group-3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
