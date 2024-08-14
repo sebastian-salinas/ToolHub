@@ -73,8 +73,49 @@ body {
     align-items: center;
   }
 
+  .nav-btn-icon-git {
+    width: 30px; /* Tamaño del icono */
+    height: 30px; /* Tamaño del icono */
+    margin-right: 0.5rem;
+    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
+  }
+
+  .nav-btn-icon-git:hover {
+    cursor: pointer;
+    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
   .title-aside {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  @keyframes animateTitle {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(180deg);
+      filter: drop-shadow(0 0 0px transparent);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.5) rotate(0deg);
+      filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+    }
+  }
+
+  .title-img {
+    width: 60px;
+    animation: animateTitle 1s ease-in-out forwards;
+  }
+
+  .text-title {
+    font-family: "Dancing Script";
+    font-size: 2.5rem;
+    opacity: 0;
+    margin-left: 2rem;
+    animation: animateTitle 1s ease-in-out forwards;
   }
 
   .item-list {
@@ -417,30 +458,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-
-  .nav-btn-icon-git {
-    width: 30px; /* Tamaño del icono */
-    height: 30px; /* Tamaño del icono */
-    margin-right: 0.5rem;
-    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
-  }
-
-  .nav-btn-icon-git:hover {
-    cursor: pointer;
-    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
-    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
-  }
-
-  .title-img {
-    width: 60px;
-    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
-  }
-
-  .title-img:hover {
-    cursor: pointer;
-    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
-    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
-  }
 }
 
 @media (min-width: 1001px) {
@@ -502,8 +519,49 @@ body {
     align-items: center;
   }
 
+  .nav-btn-icon-git {
+    width: 30px; /* Tamaño del icono */
+    height: 30px; /* Tamaño del icono */
+    margin-right: 0.5rem;
+    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
+  }
+
+  .nav-btn-icon-git:hover {
+    cursor: pointer;
+    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
   .title-aside {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  @keyframes animateTitle {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(180deg);
+      filter: drop-shadow(0 0 0px transparent);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.5) rotate(0deg);
+      filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+    }
+  }
+
+  .title-img {
+    width: 60px;
+    animation: animateTitle 1s ease-in-out forwards;
+  }
+
+  .text-title {
+    font-family: "Dancing Script";
+    font-size: 2.5rem;
+    opacity: 0;
+    margin-left: 2rem;
+    animation: animateTitle 1s ease-in-out forwards;
   }
 
   .item-list {
@@ -690,9 +748,6 @@ body {
 
   /*Ingresos - gastos*/
 
-  .result {
-  }
-
   .result p {
     font-size: 18px;
     margin-top: 12px;
@@ -843,34 +898,10 @@ body {
     transition: 0.5ms;
   }
 
-  /* calculadora cientifica*/
+  /* */
 
   .form-group {
     display: flex;
     flex-direction: column;
-  }
-
-  .nav-btn-icon-git {
-    width: 30px; /* Tamaño del icono */
-    height: 30px; /* Tamaño del icono */
-    margin-right: 0.5rem;
-    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
-  }
-
-  .nav-btn-icon-git:hover {
-    cursor: pointer;
-    transform: scale(1.3) rotate(360deg); /* Combina la escala y la rotación */
-    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
-  }
-
-  .title-img {
-    width: 60px;
-    transition: transform 0.75s ease-in-out, filter 0.5s ease-in-out; /* Suaviza la transición de transform y filter */
-  }
-
-  .title-img:hover {
-    cursor: pointer;
-    transform: scale(1.5) rotate(360deg); /* Combina la escala y la rotación */
-    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
   }
 }
