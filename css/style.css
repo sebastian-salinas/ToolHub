@@ -118,6 +118,20 @@ body {
     animation: animateTitle 1s ease-in-out forwards;
   }
 
+  .title-img-2 {
+    width: 60px;
+    transform: scale(1.5) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
+  .text-title-2 {
+    font-family: "Dancing Script";
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    transform: scale(1.5) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
   .item-list {
     display: flex;
     flex-direction: column;
@@ -562,6 +576,20 @@ body {
     opacity: 0;
     margin-left: 2rem;
     animation: animateTitle 1s ease-in-out forwards;
+  }
+
+  .title-img-2 {
+    width: 60px;
+    transform: scale(1.5) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
+  }
+
+  .text-title-2 {
+    font-family: "Dancing Script";
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    transform: scale(1.5) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgb(63, 95, 124));
   }
 
   .item-list {
