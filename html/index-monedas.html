@@ -45,11 +45,11 @@
             <a href="/html/index-monedas.html" class="icon-link">
               <div class="icon-container">
                 <img
-                  src="/assets/currency-exchange.svg"
+                  src="/assets/password_24dp_E8EAED.svg"
                   alt="Exchange icon"
                   class="icon" />
               </div>
-              <p>Conversor de monedas</p>
+              <p>Generador de contraseñas</p>
             </a>
           </div>
           <div class="item-list-btn">
@@ -94,22 +94,11 @@
         </div>
       </nav>
       <main class="main">
-        <h2 class="title-main">Conversor de monedas</h2>
+        <h2 class="title-main">Generador de contraseñas</h2>
         <div class="converter">
-          <div class="input-group">
-            <input type="number" id="amount" placeholder="Cantidad" />
-            <select id="fromCurrency"></select>
-            <select id="toCurrency"></select>
-          </div>
-          <button id="convert">Convertir</button>
-          <div class="result" id="result"></div>
-        </div>
-        <div class="container">
-          <h1>Generador de Contraseñas Seguras</h1>
-          <div class="generator">
+          <div class="input-group-3-3">
             <label for="length">Longitud de la contraseña:</label>
             <input type="number" id="length" min="4" max="32" value="16" />
-
             <label>
               <input type="checkbox" id="uppercase" checked />
               Incluir mayúsculas
@@ -126,13 +115,11 @@
               <input type="checkbox" id="symbols" checked />
               Incluir símbolos
             </label>
-
             <button id="generate">Generar Contraseña</button>
-
-            <div class="result">
-              <p id="password"></p>
-              <button id="copy">Copiar al portapapeles</button>
-            </div>
+          </div>
+          <div class="result">
+            <p id="password"></p>
+            <button id="copy">Copiar al portapapeles</button>
           </div>
         </div>
       </main>
