@@ -1,8 +1,16 @@
 # Ignorar directorio de dependencias de Node.js
 node_modules/
 
+# Archivos de Firebase
+.firebase/
+.firebaserc
+firebase-debug.log
+
 # Ignorar el archivo de configuración de entorno
 .env
+.env.local
+.env.*.local
+
 
 # Ignorar directorios generados por la construcción del proyecto
 dist/
@@ -21,6 +29,7 @@ Thumbs.db
 # Ignorar configuraciones del editor de código
 .vscode/
 .idea/
+*.code-workspace
 
 # Ignorar archivos de caché y temporales
 *.cache
@@ -29,3 +38,10 @@ Thumbs.db
 # Ignorar directorios temporales
 temp/
 tmp/
+
+# Archivos de bloqueo de dependencias (opcional)
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
