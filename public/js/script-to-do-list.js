@@ -47,7 +47,7 @@ function agregarTarea() {
   botonEliminar.classList.add("boton-eliminar");
 
   const imgEliminar = document.createElement("img");
-  imgEliminar.src = "/public/assets/delete-icon.svg";
+  imgEliminar.src = "assets/delete-icon.svg";
   imgEliminar.alt = "Eliminar tarea";
   imgEliminar.classList.add("icono-eliminar");
 
