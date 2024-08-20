@@ -110,6 +110,11 @@ svg {
     animation: animateTitle 1s ease-in-out forwards;
   }
 
+  .link-title {
+    text-decoration: none;
+    color: var(--text-white-color);
+  }
+
   .title-img-2 {
     width: 60px;
     transform: scale(1.5) rotate(0deg);
@@ -122,11 +127,6 @@ svg {
     margin-left: 2rem;
     transform: scale(1.5) rotate(0deg);
     filter: drop-shadow(0 0 5px rgb(63, 95, 124));
-  }
-
-  .link-title {
-    text-decoration: none;
-    color: var(--text-white-color);
   }
 
   .item-list {
@@ -313,17 +313,6 @@ svg {
     height: 2.5rem;
   }
 
-  #listaTareas {
-    list-style: none;
-    color: var(--text-white-color);
-    font-size: 18px;
-    margin-right: 0.5rem;
-  }
-
-  #listTareas li {
-    border: none;
-  }
-
   .boton-eliminar {
     display: flex;
     justify-content: center;
@@ -348,6 +337,14 @@ svg {
   }
 
   /* Estilo de los elementos de la lista */
+
+  #listaTareas {
+    list-style: none;
+    color: var(--text-white-color);
+    font-size: 18px;
+    margin: 0 1rem 0 1rem;
+  }
+
   #listaTareas li {
     display: flex;
     align-items: center;
@@ -796,17 +793,6 @@ svg {
     height: 3rem;
   }
 
-  #listaTareas {
-    list-style: none;
-    color: var(--text-white-color);
-    margin-left: 1.5rem;
-    font-size: 18px;
-  }
-
-  #listTareas li {
-    border: none;
-  }
-
   .boton-eliminar {
     display: flex;
     justify-content: center;
@@ -831,6 +817,14 @@ svg {
   }
 
   /* Estilo de los elementos de la lista */
+
+  #listaTareas {
+    list-style: none;
+    color: var(--text-white-color);
+    margin-left: 1.5rem;
+    font-size: 18px;
+  }
+
   #listaTareas li {
     display: flex;
     align-items: center;
