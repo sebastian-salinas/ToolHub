@@ -124,6 +124,11 @@ svg {
     filter: drop-shadow(0 0 5px rgb(63, 95, 124));
   }
 
+  .link-title {
+    text-decoration: none;
+    color: var(--text-white-color);
+  }
+
   .item-list {
     display: flex;
     flex-direction: column;
@@ -594,6 +599,11 @@ svg {
     animation: animateTitle 1s ease-in-out forwards;
   }
 
+  .link-title {
+    text-decoration: none;
+    color: var(--text-white-color);
+  }
+
   .title-img-2 {
     width: 60px;
     transform: scale(1.5) rotate(0deg);
@@ -914,24 +924,6 @@ svg {
     width: 100%;
     flex-wrap: wrap;
     border-bottom: 1px solid #243647;
-  }
-
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background-color: #243647;
-    border: none;
-    margin-right: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.5s, color 0.5s;
-  }
-
-  .nav-btn:hover {
-    background-color: #243647a8;
-    cursor: pointer;
   }
 
   /*Main*/
